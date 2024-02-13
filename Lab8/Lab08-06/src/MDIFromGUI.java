@@ -14,7 +14,7 @@ public class MDIFromGUI {
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mb = new JMenuBar();
         fr.setJMenuBar(mb);
-        mn1 = new JMenu("File");
+        mn1 = new JMenu("Filerxxx");
         mn1.setMnemonic('F');
         mn2 = new JMenu("Edit");
         mn3 = new JMenu("View");

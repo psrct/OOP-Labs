@@ -15,7 +15,7 @@ public class Account {
         }
     }
     public void withdraw(double a){
-        if ((a > 0)&((this.balance - a) > 0)){
+        if ((a > 0)&((this.balance - a) >= 0)){
             this.setBalance((this.balance - a));
             System.out.println(String.format("%.1f baht is withdrawn from %s.", a, this.getName()));
         } else if (a<0){

@@ -2,7 +2,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private Account acct[];
-    private int numOfAcccount;
+    private int numOfAccount;
 
     public Customer(){
         this("", "");
@@ -35,14 +35,19 @@ public class Customer {
         return acct[index];
     }
     public void addAccount(Account ac){
-        for (int i=0; i<10; i++)
-            if (acct[i] == null){
-                acct[i] = ac;
-                this.numOfAcccount += 1;
-                break;
+        if (this.getNumOfAccount()>= 10){
+            System.out.println("Full can't insert");
+        }else{
+            for (int i=0; i<10; i++){
+                if (acct[i] == null){
+                    acct[i] = ac;
+                    this.numOfAccount += 1;
+                    break;
+                }
             }
+        }
     }
     public int getNumOfAccount(){
-        return this.numOfAcccount;
+        return this.numOfAccount;
     }
 }
